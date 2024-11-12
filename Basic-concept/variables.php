@@ -35,6 +35,8 @@ Variable names are case-sensitive ($age and $AGE are two different variables) */
 
     echo add(5, 10); */
 
+    
+
 ?>
 </body>
 </html>
