@@ -248,6 +248,5 @@ Variable names are case-sensitive ($age and $AGE are two different variables) */
 ?>
 
 
-
 </body>
 </html>
