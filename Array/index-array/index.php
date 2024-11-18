@@ -134,17 +134,6 @@ $array3 = [
     echo "<br>";
  */
 
-    $array1 = [
-    "a" => "apple", 
-    "b" => "banana", 
-    "c" => "cherry"
-    ];
-
-    $array2 = [
-        "a" => "apple", 
-        "b" => "orange", 
-        "d" => "date"
-    ];
 
     // $diff_assoc = json_encode(array_diff_assoc($array1, $array2));
     // print_r($diff_assoc);
@@ -153,14 +142,27 @@ $array3 = [
     // echo "<br>";
     // print_r($diff_key);
     // echo "<br>";
-   
-    function key_compare_fun($key1, $key2){
-        return strcmp($key1, $key2);
-    }
+    
+    // $array1 = [
+    //     "a" => "apple", 
+    //     "b" => "banana", 
+    //     "c" => "cherry"
+    // ];
 
-    $result = array_diff_uassoc($array1, $array2, "key_compare_func");
-    print_r($result);
+    // $array2 = [
+    //     "a" => "apple", 
+    //     "b" => "orange",
+    //     "c" => "cherry"
+    // ];
+    // function key_compare_func($key1, $key2){
+    //     return strcmp($key1, $key2);
+    // }
+    
+    // $result = array_diff_uassoc($array1, $array2, "key_compare_func");
+    // print_r($result);
 
+    
+    
 ?>
 </body>
 </html>
