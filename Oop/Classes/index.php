@@ -9,26 +9,41 @@
     <h1>Hello OOP</h1>
     
 <?php 
-// class Fruit{
-//     public $name;
-//     public $color;
+// Define the Fruit class
+/* class Fruit {
+    // Public properties to store name and color of the fruit
+    public $name;
+    public $color;
 
-//     function set_name($name){
-//         return $this->name = $name;
-//     }
-//     function get_name(){
-//         return $this-> name;
-//     }
-// }
-// $apple = new Fruit();
-// $banana = new Fruit();
-// $apple->set_name("Apple");
-// $banana->set_name("Kola");
+    // Method to set the name of the fruit
+    function set_name($name) {
+        // Assign the provided name to the name property of the current object
+        return $this->name = $name;
+    }
 
+    // Method to get the name of the fruit
+    function get_name() {
+        // Return the name of the fruit
+        return $this->name;
+    }
+}
 
-// echo $apple->get_name();
-// echo "<br>";
-// echo $banana->get_name();
+// Create a new instance of the Fruit class for an apple
+$apple = new Fruit();
+// Create another instance of the Fruit class for a banana
+$banana = new Fruit();
+
+// Set the name for the apple object
+$apple->set_name("Apple");
+// Set the name for the banana object
+$banana->set_name("Kola");
+
+// Output the name of the apple fruit
+echo $apple->get_name(); // Expected output: Apple
+echo "<br>";
+// Output the name of the banana fruit
+echo $banana->get_name(); // Expected output: Kola
+ */
 
 class FindName {
     public $name;
@@ -47,9 +62,9 @@ class FindName {
     // Set the behavior based on input
     function setBabohar($vehabior) {
         if ($vehabior == "lafanga") {
-            $this->vehabior = "Rafi";  // Correct the assignment
+            $this->vehabior = "Rafi lafanga!";  // Correct the assignment
         } else if ($vehabior == 'potpot') {
-            $this->vehabior = 'ShawonVai';  // Correct the assignment
+            $this->vehabior = 'Shawon Pok pok!';  // Correct the assignment
         } else {
             $this->vehabior = "Munna";  // Correct the assignment
         }
@@ -62,11 +77,17 @@ class FindName {
 }
 
 $rafi = new FindName();
-$Captun = new FindName();
+$laptun = new FindName();
 
 $rafi->setName("Rafi");
 $rafi->setBabohar("lafanga");
+$laptun->setName('ShawonKaku');
+$laptun->setBabohar('potpot');
 
+echo $laptun->getName();
+echo "<br>";
+echo $laptun->getBabohar();
+echo "<br>";echo "<br>";
 echo $rafi->getName();  // Outputs: Rafi
 echo "<br>";
 echo $rafi->getBabohar();  // Outputs: Rafi
