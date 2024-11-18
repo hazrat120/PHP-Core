@@ -45,7 +45,7 @@ echo "<br>";
 echo $banana->get_name(); // Expected output: Kola
  */
 
-class FindName {
+/* class FindName {
     public $name;
     public $vehabior;
 
@@ -91,7 +91,66 @@ echo "<br>";echo "<br>";
 echo $rafi->getName();  // Outputs: Rafi
 echo "<br>";
 echo $rafi->getBabohar();  // Outputs: Rafi
+ */
 
+ /* class Unic_ople{
+    public $name;
+    public $behaviour;
+    public $universalBehaviour;
+
+    function set_Name($name){
+        return $this->name = $name;
+    }
+    function get_Name(){
+    return $this->name;
+    }
+
+    function  set_Behaviour($behaviour){
+        if($behaviour == "pokpok"){
+            $this->behaviour = "Rafi is a Pot pot!";
+        }else if($behaviour == "Jogra"){
+        $this->behaviour = "Jogra Kore onek!";
+        }
+    }
+ }
+  */
+
+//   dynamic class
+//   class Student{
+//     public static $name = "Munna";
+
+//     static function studentName($name){
+//         return $name;
+//     }
+//   }
+
+
+//   echo Student::$name;
+
+//   dynamic 
+/* class Student{
+    public $name = "ismail";
+    public $age;
+
+    function set_Name($cname){
+        $this->name = $cname;
+    } 
+    function get_Name(){
+        return $this->name;
+    }
+
+    function set_Age($Page){
+        $this->age = $Page;
+    }
+    function get_Age(){
+        return $this->age;
+    }
+}
+
+$razib = new Student();
+$razib->set_Name("");
+echo $razib->get_Name();
+ */
 ?>
 </body>
 </html>
