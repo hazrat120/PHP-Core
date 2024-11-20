@@ -8,7 +8,7 @@
 <body>
     
 <?php 
-class PersonNameEmail{
+/* class PersonNameEmail{
     public $name;
     public $email;
 
@@ -30,7 +30,7 @@ class PersonNameEmail{
 
 $ali = new PersonNameEmail("Hazrat Ali", 'hazrat.ali@gmail.com');
 $ali->displayInfo("Munna Ali", 'Munna.ali@gmail.com');
-unset($ali); 
+unset($ali);  */
 
 
 // class FileHandler {
@@ -62,7 +62,7 @@ unset($ali);
 // // অবজেক্ট ধ্বংস
 // unset($fileHandler); // ডিস্ট্রাক্টর স্বয়ংক্রিয়ভাবে কল হবে
 
-class A{
+/* class A{
     public $name="Md Ismail";
 }
 class B{
@@ -75,7 +75,53 @@ if($a instanceof B){
 }else{
      echo"<br>The object not instance by class A";
 }
+ */
 
+//  ================  Public  ==========
+class Vehical{
+    public $brand;
+    protected $model;
+    private $year;
+
+    public function __construct($brand, $model, $year){
+        $this->brand = $brand;
+        $this->model = $model;
+        $this->year = $year;
+    }
+
+    public function displayInfo(){
+        return "Brand:". $this->brand . ", Model: " . $this->model . ", Year: " . $this->year . ". ";
+    }
+    
+    protected function getModel(){
+        return "Protected function return model: ". $this->model;
+    }
+
+    private function getYear(){
+        return "Private function return year: " . $this->year;
+    }
+}
+
+class Car extends Vehical{
+    public $fuelType;
+
+    public function __construct($brand, $model, $year, $fuelType){
+        parent::__construct($brand, $model, $year);
+        $this->fuelType = $fuelType;
+    }
+
+    public function displayInfo(){
+        echo parent::displayInfo() .", FuelType: " . $this->fuelType . "\n";
+    }
+
+    public function showModel(){
+        echo "Model Show: " . $this->getModel();
+    }
+}
+
+$toyota = new Vehical("Toyota", "corolla", 2022);
+echo $toyota->displayInfo();
+// echo $toyota->getModel();
 ?>
 
 </body>
