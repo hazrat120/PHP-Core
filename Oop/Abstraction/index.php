@@ -45,14 +45,19 @@ interface Animal{
 }
 
 class Dog implements Animal{
-public function makeSount()
-{
-    echo "Woof woof!";
-}
-public function sleep(){
-    echo "20 Hours!";
-}
+    public function makeSount()
+    {
+        echo "Woof woof!";
+    }
+    public function sleep(){
+        echo "The dog is sleeping.";
+    }
 }
 
-
+/* class Cat implements Animal{
+    public function makeSount()
+    {
+        echo "meeew... meew"
+    }
+} */
 ?>

@@ -6,7 +6,7 @@
 
 # Date = 20-11-2024
 
-# Public, Private and Protected, abstraction = "abstract class, abstrac method, instance='implements', ", static method, static class, static object, static variable.
+# Public, Private and Protected, abstraction = "abstract class, abstrac method, interface='implements', class export import (namespace, use).
 
 => public: প্রপার্টি বা মেথড ক্লাসের বাইরে থেকে যেকোনো কোড বা অবজেক্ট দ্বারা অ্যাক্সেস করা যেতে পারে।
 এটি কোনো ধরনের অ্যাক্সেস কন্ট্রোল সীমাবদ্ধতা আরোপ করে না, অর্থাৎ এটি সম্পূর্ণভাবে খোলা থাকে।
