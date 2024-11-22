@@ -78,7 +78,7 @@ if($a instanceof B){
  */
 
 //  ================  Public  ==========
-class Vehical{
+/* class Vehical{
     public $brand;
     protected $model;
     private $year;
@@ -120,8 +120,30 @@ class Car extends Vehical{
 }
 
 $toyota = new Vehical("Toyota", "corolla", 2022);
-echo $toyota->displayInfo();
+echo $toyota->displayInfo(); */
 // echo $toyota->getModel();
+
+class Product{
+    public $name;
+    public $size;
+    private $code;
+    public $price;
+
+    // constructor
+    public function __construct($_name, $_size, $_code, $_price)
+    {
+        $this->name = $_name;
+        $this->size = $_size;
+        $this->code = $_code;
+        $this->price = $_price;
+    }
+
+    public function displayInfo(){
+        echo "Product Name: " . $this->name . "Size: " . $this->size . "Code: " . $this->code . "Price: " . $this->price;
+    }
+}
+$hoodie  = new Product('Hoodie ', 'M, L ', 'H-56 ', '850 ');
+$hoodie->displayInfo();
 ?>
 
 </body>
