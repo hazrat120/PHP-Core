@@ -30,6 +30,5 @@ class Students{
                 echo "Id $id || Name: $name <br>";
         }
     }
-
 }
 ?>

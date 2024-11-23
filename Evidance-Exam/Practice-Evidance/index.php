@@ -8,8 +8,10 @@ if(isset($_POST['submitBtn'])){
     $student = new Students($id, $name);
     $student->SaveData();
     echo "Success";
-}
 
+    header('Location: ' . $_SERVER['PHP_SELF']);
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
