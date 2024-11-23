@@ -122,7 +122,7 @@ class Car extends Vehical{
 $toyota = new Vehical("Toyota", "corolla", 2022);
 echo $toyota->displayInfo(); */
 // echo $toyota->getModel();
-
+/* 
 class Product{
     public $name;
     public $size;
@@ -142,8 +142,43 @@ class Product{
         echo "Product Name: " . $this->name . "Size: " . $this->size . "Code: " . $this->code . "Price: " . $this->price;
     }
 }
+
 $hoodie  = new Product('Hoodie ', 'M, L ', 'H-56 ', '850 ');
 $hoodie->displayInfo();
+
+class Test{
+    public function __construct(){
+        echo "Constructor called.<br>";
+    }
+
+    public function __destruct()
+    {
+        echo "Destructor called.<br>";
+    }
+}
+
+echo "<br>";
+$obj = new Test();
+echo "Object in use.<br>";
+ */
+
+class Sample{
+    public function __construct()
+    {
+        echo 'Constructor initiallized. <br>';
+    }
+
+    public function __destruct()
+    {
+        echo "Destructor executed. <br>";
+    }
+}
+
+$obj2 = new Sample();
+unset($obj2);
+echo "After unset.<br>";
+
+
 ?>
 
 </body>
