@@ -8,7 +8,7 @@ if (isset($_POST['submitBtn'])) {
 
     // Check if any field is empty
     if (empty($name) || empty($id) || empty($batch)) {
-        echo "<script>alert('All fields are required!');</script>"; // Display error message
+        echo "<script>alert('All fields are required plz!');</script>"; // Display error message
     } else {
         // Create a new student instance if all fields are filled
         $student = new Students($name, $id, $batch);
@@ -92,3 +92,4 @@ if (isset($_POST['submitBtn'])) {
 <?php
 Students::Displayinfo();
 ?>
+
