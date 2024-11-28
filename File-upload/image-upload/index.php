@@ -13,7 +13,6 @@ if(isset($_POST['submit'])){
     if(($kb > 200) && (($fileType == "jpg") || ($fileType == 'png') || ($fileType == 'pdf'))){
         move_uploaded_file($temp_file, $imgpath.$filename);
         echo "Successfully uploaded";
-       
     }else {
         echo "FIle is too large";
         echo "<h1>File extension support .jpg, .png, .document are supported! </h1>";
@@ -23,6 +22,15 @@ if(isset($_POST['submit'])){
     echo "<br>";
     echo "<br>";
 }
+
+    $images = glob($imgpath. "* . {jpg, jpeg,png, gif}" . GLOB_BRACE);
+    if(count($filename) > 0){
+        foreach($filename as $image){
+            echo "<img src='$image' width='500px'>";
+        }
+    }else{
+        echo "No images uploaded!";
+    }
 ?>
 
 
@@ -38,7 +46,7 @@ if(isset($_POST['submit'])){
         <input type="file" name="image" >
         <button type="submit" name="submit">Submit</button>
     </form>
-    <img src="./image/banner-06-1.png" alt="">
-    <img src="./image/Contact Information.png" alt="">
+    <img src="./image/banner-06-1.png" width="500px" alt="">
+    <img src="./image/pexels-ridvan-ayrik-306414752-19153152.jpg" width="500px" alt="">
 </body>
 </html>
