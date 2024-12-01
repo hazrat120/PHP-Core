@@ -1,4 +1,9 @@
-
+<?php
+if(isset($_POST['submitBtn'])){
+    $imageName = $_FILES['imagefile']['name'];
+    var_dump($imageName);
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +25,6 @@
             font-weight: 500;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
-
     </style>
 </head>
 <body>
