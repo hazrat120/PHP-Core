@@ -15,3 +15,7 @@
 => Abstraction: হল একটি প্রোগ্রামিং কৌশল যেখানে ক্লাসের অপ্রয়োজনীয় বা কম গুরুত্বপূর্ণ বিস্তারিত গোপন রাখা হয় এবং শুধুমাত্র গুরুত্বপূর্ণ কার্যাবলী প্রকাশ করা হয়। PHP তে এটি abstract class বা interface ব্যবহার করে বাস্তবায়িত হয়।
 
 # isset(), list(), file_put_contents(), PHP_EOL, file()
+
+# 28-11-2024
+
+- Cookie upload set etc

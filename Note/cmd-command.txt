@@ -1,0 +1,200 @@
+========== Show dabase data =======
+cd\
+c: //  for drive change
+cd xampp
+cd mysql
+cd bin
+mysql -u root -p   // to connect root path
+create database databasename  // to create database
+use databasename;
+show databases; // show all database name
+show tables;
+create table tablename (id int,name varchar(30) not null,email varchar(30));
+desc tablename;
+insert into tablename values(1,'rima','rina@gmail.com'); // data insert 
+select * from tablename;
+
+update tablename set fieldname = value where id = value; // for update data.
+delete  from tablename where id = value;  // delete record or row
+
+
+Microsoft Windows [Version 10.0.19045.2965]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\student>cd ..
+
+C:\Users>cd ..
+
+C:\>e:
+
+E:\>cd xampp
+
+E:\xampp>cd mysql
+
+E:\xampp\mysql>cd bin
+
+E:\xampp\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 113
+Server version: 10.4.27-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| company            |
+| ecommarce          |
+| information_schema |
+| myproject          |
+| mysql              |
+| new_table          |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+9 rows in set (0.001 sec)
+
+MariaDB [(none)]> create database trainee_table;
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [(none)]> use trainee_table;
+Database changed
+MariaDB [trainee_table]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| company            |
+| ecommarce          |
+| information_schema |
+| myproject          |
+| mysql              |
+| new_table          |
+| performance_schema |
+| phpmyadmin         |
+| test               |
+| trainee_table      |
++--------------------+
+10 rows in set (0.001 sec)
+
+MariaDB [trainee_table]> create table trainee_details(id int,username varchar(30) not null,email varchar(30) not null);
+Query OK, 0 rows affected (0.017 sec)
+
+MariaDB [trainee_table]> desc trainee_table;
+ERROR 1146 (42S02): Table 'trainee_table.trainee_table' doesn't exist
+MariaDB [trainee_table]> show table;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+MariaDB [trainee_table]> show table
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+MariaDB [trainee_table]> desc trainee_details;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| id       | int(11)     | YES  |     | NULL    |       |
+| username | varchar(30) | NO   |     | NULL    |       |
+| email    | varchar(30) | NO   |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+3 rows in set (0.015 sec)
+
+MariaDB [trainee_table]> insert into trainee_details values(1,'Rakib','rakib@gmail.com');
+Query OK, 1 row affected (0.010 sec)
+
+MariaDB [trainee_table]> show table;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+MariaDB [trainee_table]> select * trainee_details;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'trainee_details' at line 1
+MariaDB [trainee_table]> select * from trainee_details;
++------+----------+-----------------+
+| id   | username | email           |
++------+----------+-----------------+
+|    1 | Rakib    | rakib@gmail.com |
++------+----------+-----------------+
+1 row in set (0.000 sec)
+
+MariaDB [trainee_table]> show table;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+MariaDB [trainee_table]> show tables;
++-------------------------+
+| Tables_in_trainee_table |
++-------------------------+
+| trainee_details         |
++-------------------------+
+1 row in set (0.000 sec)
+
+MariaDB [trainee_table]> insert into trainee_details values(2,'Bristy','bristy@gmail.com');
+Query OK, 1 row affected (0.009 sec)
+
+MariaDB [trainee_table]> select * from trainee_details;
++------+----------+------------------+
+| id   | username | email            |
++------+----------+------------------+
+|    1 | Rakib    | rakib@gmail.com  |
+|    2 | Bristy   | bristy@gmail.com |
++------+----------+------------------+
+2 rows in set (0.000 sec)
+
+MariaDB [trainee_table]> insert into trainee_details values(3,'Sheuly','sheuly@gmail.com');
+Query OK, 1 row affected (0.009 sec)
+
+MariaDB [trainee_table]> select * from trainee_details;
++------+----------+------------------+
+| id   | username | email            |
++------+----------+------------------+
+|    1 | Rakib    | rakib@gmail.com  |
+|    2 | Bristy   | bristy@gmail.com |
+|    3 | Sheuly   | sheuly@gmail.com |
++------+----------+------------------+
+3 rows in set (0.000 sec)
+
+MariaDB [trainee_table]> insert into trainee_details values(4,'Miraj','miraj@gmail.com');
+Query OK, 1 row affected (0.009 sec)
+
+MariaDB [trainee_table]> select * from trainee_details;
++------+----------+------------------+
+| id   | username | email            |
++------+----------+------------------+
+|    1 | Rakib    | rakib@gmail.com  |
+|    2 | Bristy   | bristy@gmail.com |
+|    3 | Sheuly   | sheuly@gmail.com |
+|    4 | Miraj    | miraj@gmail.com  |
++------+----------+------------------+
+4 rows in set (0.000 sec)
+
+MariaDB [trainee_table]> update trainee_details set email = khaleda where id = 2;
+ERROR 1054 (42S22): Unknown column 'khaleda' in 'field list'
+MariaDB [trainee_table]> update trainee_details set email = 'khaleda@gmail.com' where id = 2;
+Query OK, 1 row affected (0.009 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [trainee_table]> select * from trainee_details;
++------+----------+-------------------+
+| id   | username | email             |
++------+----------+-------------------+
+|    1 | Rakib    | rakib@gmail.com   |
+|    2 | Bristy   | khaleda@gmail.com |
+|    3 | Sheuly   | sheuly@gmail.com  |
+|    4 | Miraj    | miraj@gmail.com   |
++------+----------+-------------------+
+4 rows in set (0.000 sec)
+
+MariaDB [trainee_table]> delete from trainee_details where id = 3;
+Query OK, 1 row affected (0.011 sec)
+
+MariaDB [trainee_table]> select * from trainee_details;
++------+----------+-------------------+
+| id   | username | email             |
++------+----------+-------------------+
+|    1 | Rakib    | rakib@gmail.com   |
+|    2 | Bristy   | khaleda@gmail.com |
+|    4 | Miraj    | miraj@gmail.com   |
++------+----------+-------------------+
+3 rows in set (0.000 sec)
+
+MariaDB [trainee_table]>
+

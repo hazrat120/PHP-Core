@@ -1,2 +1,6 @@
 1234, Ali, idwb
+<<<<<<< HEAD
 5007854562, Hazrat Ali, bagd
+=======
+45, Ali, 98';ll
+>>>>>>> 334149c2c724c9bd4c16dbe99f841a16f545f155
